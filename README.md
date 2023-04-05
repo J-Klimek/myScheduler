@@ -5,7 +5,7 @@ Title of Application: myScheduler
 Purpose of Application: Provide a Graphical User Interface for a client to provide
 Create, Read, Update and Delete functionality for a mySQL database to manage appointments and customers.
 
-Author: James Klimek | jklime2@wgu.edu
+Author: James Klimek
 Student Application Version 1.0.0
 
 IDE: IntelliJ IDEA 2022.3.2 (Community Edition)
