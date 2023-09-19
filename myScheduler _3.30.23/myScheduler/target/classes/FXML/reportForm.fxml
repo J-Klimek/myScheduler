@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="622.0" prefWidth="1174.0" style="-fx-background-color: #3257ad;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jklimek.c195.myscheduler.controllers.reportFormController">
+   <children>
+      <TableView fx:id="ApptTableView" layoutX="244.0" layoutY="199.0" prefHeight="306.0" prefWidth="720.0" style="-fx-background-radius: 5px;">
+         <columns>
+            <TableColumn fx:id="csApptIDCol" prefWidth="61.0" text="Appt ID" />
+            <TableColumn fx:id="csTitleCol" prefWidth="108.0" text="Title" />
+            <TableColumn fx:id="csDescCol" prefWidth="141.0" text="Description" />
+            <TableColumn fx:id="csTypeCol" prefWidth="112.0" text="Type" />
+            <TableColumn fx:id="csStartTimeCol" prefWidth="122.0" text="Start Date/Time" />
+            <TableColumn fx:id="csEndTimeCol" prefWidth="109.0" text="End Date/Time" />
+            <TableColumn fx:id="csCustIDCol" prefWidth="65.0" text="Cust ID" />
+         </columns>
+      </TableView>
+      <Text layoutX="14.0" layoutY="57.0" stroke="#5df2db" strokeType="OUTSIDE" strokeWidth="0.0" text="myScheduler" textAlignment="CENTER" wrappingWidth="219.13671875">
+         <font>
+            <Font name="Calibri Bold" size="36.0" />
+         </font>
+         <effect>
+            <ColorAdjust brightness="1.0" contrast="0.05" />
+         </effect>
+      </Text>
+      <Separator layoutX="111.0" layoutY="67.0" prefHeight="17.0" prefWidth="142.0" />
+      <Separator layoutX="230.0" layoutY="14.0" orientation="VERTICAL" prefHeight="87.0" prefWidth="15.0" />
+      <Label layoutX="147.0" layoutY="81.0" prefHeight="17.0" prefWidth="85.0" text="Reports" textAlignment="RIGHT" textFill="WHITE" />
+      <Pane layoutX="11.0" layoutY="199.0" prefHeight="306.0" prefWidth="226.0" style="-fx-background-color: #4982bf; -fx-background-radius: 5px;">
+         <children>
+            <Label layoutX="18.0" layoutY="22.0" text="Type:" textAlignment="RIGHT" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="7.0" layoutY="60.0" prefHeight="20.0" prefWidth="54.0" text="Month:" textAlignment="RIGHT" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="apptTypeCombo" layoutX="64.0" layoutY="20.0" onAction="#onActionSelectApptType" prefWidth="150.0" promptText="select a type" />
+            <ComboBox fx:id="apptMonthCombo" layoutX="64.0" layoutY="58.0" onAction="#onActionCountApptsMonthType" prefWidth="150.0" promptText="select a month" />
+            <Label fx:id="apptTypeLabel" layoutX="7.0" layoutY="130.0" prefHeight="20.0" prefWidth="204.0" text="Appointment Type" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="apptMonthLabel" layoutX="7.0" layoutY="157.0" prefHeight="20.0" prefWidth="204.0" text="Appointment Month" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="mtCountLabel" layoutX="9.0" layoutY="183.0" prefHeight="27.0" prefWidth="204.0" text="0" textAlignment="RIGHT" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+         </children></Pane>
+      <Button layoutX="564.0" layoutY="540.0" mnemonicParsing="false" onAction="#OnActionOpenCustomers" prefHeight="42.0" prefWidth="129.0" text="Customers">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="1054.0" layoutY="578.0" mnemonicParsing="false" onAction="#OnActionLogout" text="Logout" />
+      <ComboBox fx:id="csContactCombo" layoutX="600.0" layoutY="164.0" onAction="#OnActionFilterViewByContact" prefHeight="25.0" prefWidth="281.0" promptText="select a contact" />
+      <Label layoutX="253.0" layoutY="161.0" text="Contact Schedule" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="signedInUserTxt" alignment="CENTER_RIGHT" layoutX="827.0" layoutY="577.0" prefHeight="27.0" prefWidth="197.0" text="Label" textFill="WHITE" />
+      <Button layoutX="405.0" layoutY="540.0" mnemonicParsing="false" onAction="#OnActionOpenAppointments" prefHeight="42.0" prefWidth="147.0" text="Appointments">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Separator layoutX="256.0" layoutY="181.0" prefHeight="17.0" prefWidth="142.0" />
+      <Label layoutX="970.0" layoutY="126.0" prefHeight="63.0" prefWidth="181.0" text="Total Customers by Country" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Separator layoutX="974.0" layoutY="181.0" prefHeight="17.0" prefWidth="142.0" />
+      <Label layoutX="35.0" layoutY="127.0" prefHeight="63.0" prefWidth="167.0" text="Total Appointments" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Separator layoutX="31.0" layoutY="181.0" prefHeight="17.0" prefWidth="142.0" />
+      <Pane layoutX="971.0" layoutY="199.0" prefHeight="306.0" prefWidth="197.0" style="-fx-background-color: #4982bf; -fx-background-radius: 5px;">
+         <children>
+            <Label layoutX="18.0" layoutY="22.0" text="Country:" textAlignment="RIGHT" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="tccCountryLabel" layoutX="20.0" layoutY="94.0" text="Country" textAlignment="RIGHT" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="tccCountLabel" layoutX="36.0" layoutY="122.0" text="0" textAlignment="RIGHT" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="tccCountryCombo" layoutX="20.0" layoutY="54.0" onAction="#onActionCountCountry" prefWidth="150.0" promptText="select a Country" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

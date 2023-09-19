@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="622.0" prefWidth="1125.0" style="-fx-background-color: #3257ad;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jklimek.c195.myscheduler.controllers.CustomerController">
+   <children>
+      <TableView fx:id="CustomersTableView" layoutX="3.0" layoutY="151.0" prefHeight="349.0" prefWidth="1118.0">
+         <columns>
+            <TableColumn fx:id="custIDCol" prefWidth="84.0" text="Customer_ID" />
+            <TableColumn fx:id="custNameCol" prefWidth="159.0" text="Name" />
+            <TableColumn fx:id="custAddressCol" prefWidth="243.0" text="Address" />
+            <TableColumn fx:id="custPostalCodeCol" prefWidth="150.0" text="Postal Code" />
+            <TableColumn fx:id="custPhoneCol" prefWidth="120.0" text="Phone Number" />
+            <TableColumn fx:id="custCountryCol" prefWidth="123.0" text="Country" />
+            <TableColumn fx:id="custStateProvCol" prefWidth="140.0" text="State/Province" />
+            <TableColumn fx:id="custDivIDCol" prefWidth="97.0" text="Division_ID" />
+         </columns>
+      </TableView>
+      <Text layoutX="14.0" layoutY="57.0" stroke="#5df2db" strokeType="OUTSIDE" strokeWidth="0.0" text="myScheduler" textAlignment="CENTER" wrappingWidth="219.13671875">
+         <font>
+            <Font name="Calibri Bold" size="36.0" />
+         </font>
+         <effect>
+            <ColorAdjust brightness="1.0" contrast="0.05" />
+         </effect>
+      </Text>
+      <Separator layoutX="111.0" layoutY="67.0" prefHeight="17.0" prefWidth="142.0" />
+      <Separator layoutX="230.0" layoutY="14.0" orientation="VERTICAL" prefHeight="87.0" prefWidth="15.0" />
+      <Label layoutX="147.0" layoutY="81.0" prefHeight="17.0" prefWidth="85.0" text="Customers" textAlignment="RIGHT" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Pane layoutX="11.0" layoutY="513.0" prefHeight="95.0" prefWidth="368.0" style="-fx-background-color: #4982bf;" />
+      <Button layoutX="28.0" layoutY="565.0" mnemonicParsing="false" onAction="#OnActionOpenNewCustomer" prefHeight="25.0" prefWidth="100.0" text="New">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="142.0" layoutY="565.0" mnemonicParsing="false" onAction="#OnActionOpenUpdateCustomer" prefHeight="25.0" prefWidth="107.0" text="Update">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="262.0" layoutY="565.0" mnemonicParsing="false" onAction="#OnActionDeleteCustomer" prefHeight="25.0" prefWidth="100.0" text="Delete">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label layoutX="28.0" layoutY="520.0" text="Customer:" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <Button layoutX="421.0" layoutY="541.0" mnemonicParsing="false" onAction="#OnActionOpenAppointments" prefHeight="43.0" prefWidth="142.0" text="Appointments">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+      <Button layoutX="1053.0" layoutY="578.0" mnemonicParsing="false" onAction="#OnActionLogout" text="Logout" />
+      <Label fx:id="custSignedInUserTxt" alignment="CENTER_RIGHT" layoutX="830.0" layoutY="577.0" prefHeight="27.0" prefWidth="197.0" text="Label" textFill="WHITE" />
+      <Button layoutX="575.0" layoutY="541.0" mnemonicParsing="false" onAction="#OnActionOpenReports" prefHeight="42.0" prefWidth="129.0" text="Reports">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

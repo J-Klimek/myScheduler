@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="532.0" prefWidth="366.0" style="-fx-background-color: #3257ad;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jklimek.c195.myscheduler.controllers.UpdateCustomerController">
+   <children>
+      <Text layoutX="111.0" layoutY="65.0" stroke="#5df2db" strokeType="OUTSIDE" strokeWidth="0.0" text="myScheduler" textAlignment="CENTER" wrappingWidth="219.13671875">
+         <font>
+            <Font name="Calibri Bold" size="36.0" />
+         </font>
+         <effect>
+            <ColorAdjust brightness="1.0" contrast="0.05" />
+         </effect>
+      </Text>
+      <Separator layoutX="208.0" layoutY="75.0" prefHeight="17.0" prefWidth="142.0" />
+      <Separator layoutX="327.0" layoutY="22.0" orientation="VERTICAL" prefHeight="87.0" prefWidth="15.0" />
+      <Label layoutX="223.0" layoutY="89.0" prefHeight="17.0" prefWidth="112.0" text="Update Customer" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="80.0" layoutY="186.0" text="Customer ID" textAlignment="RIGHT" textFill="WHITE" />
+      <Label layoutX="113.0" layoutY="223.0" text="Name" textAlignment="RIGHT" textFill="WHITE" />
+      <Label layoutX="102.0" layoutY="258.0" text="Address" textAlignment="RIGHT" textFill="WHITE" />
+      <Label layoutX="82.0" layoutY="294.0" text="Postal Code" textAlignment="RIGHT" textFill="WHITE" />
+      <Label layoutX="102.0" layoutY="366.0" text="Country" textAlignment="RIGHT" textFill="WHITE" />
+      <Label layoutX="102.0" layoutY="403.0" text="Division" textAlignment="RIGHT" textFill="WHITE" />
+      <ComboBox fx:id="updateCountryCombo" layoutX="162.0" layoutY="362.0" onAction="#onActionCountryCBSelect" prefWidth="150.0" />
+      <ComboBox fx:id="updateDivisionCombobox" layoutX="162.0" layoutY="399.0" prefWidth="150.0" />
+      <TextField fx:id="updateCustomerIdTxt" disable="true" layoutX="163.0" layoutY="182.0" text="auto generated">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="updateNameTxt" layoutX="163.0" layoutY="219.0" />
+      <TextField fx:id="updateAddressTxt" layoutX="163.0" layoutY="254.0" />
+      <TextField fx:id="updatePostalTxt" layoutX="163.0" layoutY="290.0" />
+      <Label layoutX="65.0" layoutY="330.0" text="Phone Number" textAlignment="RIGHT" textFill="WHITE" />
+      <TextField fx:id="updatePhoneTxt" layoutX="163.0" layoutY="326.0" />
+      <Button layoutX="168.0" layoutY="453.0" mnemonicParsing="false" onAction="#OnActionCustUpdateSave" text="Save" />
+      <Button layoutX="230.0" layoutY="453.0" mnemonicParsing="false" onAction="#OnActionCustUpdateCancel" text="Cancel" />
+   </children>
+</AnchorPane>
